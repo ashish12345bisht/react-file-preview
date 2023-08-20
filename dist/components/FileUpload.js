@@ -1,16 +1,19 @@
 "use strict";
 
+require("core-js/modules/es.weak-map.js");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
 require("core-js/modules/web.dom-collections.iterator.js");
-var _react = require("react");
+var _react = _interopRequireWildcard(require("react"));
 var _Renderer = _interopRequireDefault(require("./Renderer"));
 var _defaultimage = _interopRequireDefault(require("../assets/defaultimage.jpg"));
 var _default2 = _interopRequireDefault(require("../assets/default.jpg"));
 require("./FileUpload.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 const FileUpload = _ref => {
   let {
     handleFileUpload = () => {},
@@ -48,23 +51,23 @@ const FileUpload = _ref => {
       reader.readAsDataURL(file);
     }
   };
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "file__input__container"
-  }, /*#__PURE__*/React.createElement("input", {
+  }, /*#__PURE__*/_react.default.createElement("input", {
     id: inputId,
     type: "file",
     accept: accept,
     className: "noshow-input",
     onChange: handleFileInputChange
-  }), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/_react.default.createElement("div", {
     className: "label__container ".concat(labelContainerClasses)
-  }, previewUrl && /*#__PURE__*/React.createElement(_Renderer.default, {
+  }, previewUrl && /*#__PURE__*/_react.default.createElement(_Renderer.default, {
     fileType: fileType,
     previewUrl: previewUrl
-  }), /*#__PURE__*/React.createElement("label", {
+  }), /*#__PURE__*/_react.default.createElement("label", {
     className: "upload__trigger ".concat(uploadTriggerClasses),
     htmlFor: inputId
-  }, /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     src: customUploadIcon,
     alt: "trigger-upload"
   }))));

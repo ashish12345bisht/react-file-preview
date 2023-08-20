@@ -1,7 +1,32 @@
 {
-  "name": "image-upload",
+  "name": "react-file-upload-preview",
+  "description": "A powerful React component for previewing uploaded files before they are submitted. Enhance user experience with instant file previews and customizable display options.",
+  "author": "https__ashishbisht",
+  "keywords": [
+    "react",
+    "react-component",
+    "file-upload",
+    "file-preview",
+    "user-experience",
+    "customizable",
+    "UI",
+    "components",
+    "web development",
+    "frontend",
+    "file display",
+    "real-time previews",
+    "interactive",
+    "enhance engagement",
+    "React UI",
+    "file handling",
+    "web applications",
+    "front-end development",
+    "UI components",
+    "user interface",
+    "React library"
+  ],
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "react": "^18.2.0",
@@ -12,8 +37,8 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
-    "publish:npm": "rm -rf dist && mkdir dist && babel src/lib -d dist --copy-files"
+    "build": "rd /s /q dist && set NODE_ENV=production && babel src/lib --out-dir dist --copy-files",
+    "publish:npm": "rd /s /q dist && mkdir dist && babel src/lib -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [

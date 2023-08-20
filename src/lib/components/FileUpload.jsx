@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Renderer from './Renderer';
 import defaultImg from '../assets/defaultimage.jpg';
 import triggerURL from '../assets/default.jpg';
